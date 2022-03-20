@@ -7,8 +7,12 @@ import Services from "./components/pages/Services";
 import SignUp from "./components/pages/SignUp";
 import Gallery from "./components/pages/Gallery";
 import Profile from "./components/pages/Profile";
+import { useAuth0 } from "@auth0/auth0-react";
 
 function App() {
+  const { isLoading } = useAuth0();
+
+  if (isLoading) return <div>Loading...</div>;
   return (
     <>
       <Router>
@@ -17,7 +21,6 @@ function App() {
           <Route path="/" exact component={Home} />
           <Route path="/services" component={Services} />
           <Route path="/gallery" component={Gallery} />
-          <Route path="/sign-up" component={SignUp} />
           <Route path="/profile" component={Profile} />
         </Switch>
       </Router>

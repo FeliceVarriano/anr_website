@@ -39,7 +39,7 @@ function Cards() {
               src="images/img-5.jpg"
               text="WEDDING PLACEHOLDER TEXT HAPPY"
               label="Adventure"
-              path="/sign-up"
+              path="/"
             />
           </ul>
         </div>
