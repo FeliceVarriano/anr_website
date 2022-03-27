@@ -62,7 +62,7 @@ function Navbar() {
                 Services
               </Link>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link
                 to="/gallery"
                 className="nav-links"
@@ -70,7 +70,7 @@ function Navbar() {
               >
                 Gallery
               </Link>
-            </li>
+            </li> */}
             <li className="nav-item">
               <Link
                 to="/profile"
@@ -115,7 +115,7 @@ function Navbar() {
                 Services
               </Link>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link
                 to="/gallery"
                 className="nav-links"
@@ -123,7 +123,7 @@ function Navbar() {
               >
                 Gallery
               </Link>
-            </li>
+            </li> */}
             <LoginButton className="nav-links-mobile" />
           </ul>
           {button && <LoginButton className="btn--outline-dark" />}

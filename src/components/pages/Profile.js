@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import YoutubeEmbed from "../YoutubeEmbed";
 import Footer from "../Footer";
+import styled from "styled-components";
 
 function Profile() {
   const { user, isAuthenticated, getAccessTokenSilently } = useAuth0();
@@ -38,24 +39,24 @@ function Profile() {
   }, [getAccessTokenSilently, user?.sub]);
 
   return (
-    isAuthenticated && (
-      <div>
-        <img src={user.picture} alt={user.name} />
-        <h2>{user.name}</h2>
-        <p>{user.email}</p>
+    <Container>
+      <img src={user.picture} alt={user.name} />
+      <h2>{user.name}</h2>
+      <p>{user.email}</p>
 
-        {userMetadata ? (
-          <pre>
-            <YoutubeEmbed embedId={userMetadata.livestream_url} />
-          </pre>
-        ) : (
-          "No livestream currently"
-        )}
+      {userMetadata ? (
+        <pre>
+          <YoutubeEmbed embedId={userMetadata.livestream_url} />
+        </pre>
+      ) : (
+        "No livestream currently"
+      )}
 
-        <Footer />
-      </div>
-    )
+      <Footer />
+    </Container>
   );
 }
 
 export default Profile;
+
+const Container = styled.div``;
