@@ -14,6 +14,7 @@ function HeroSection() {
           className="btns"
           buttonStyle="btn--outline"
           buttonSize="btn--large"
+          path="/contactus"
         >
           CONTACT US
         </Button>
@@ -21,7 +22,7 @@ function HeroSection() {
           className="btns"
           buttonStyle="btn--primary"
           buttonSize="btn--large"
-          onClick={console.log("hey")}
+          path="/aboutus"
         >
           ABOUT US <i className="far fa-play-circle" />
         </Button>

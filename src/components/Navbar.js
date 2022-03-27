@@ -82,7 +82,7 @@ function Navbar() {
             </li>
             <LogoutButton className="nav-links-mobile" />
           </ul>
-          {button && <LogoutButton className="btn--outline" />}
+          {button && <LogoutButton className="btn--outline-dark" />}
         </div>
       </nav>
     </>
@@ -126,7 +126,7 @@ function Navbar() {
             </li>
             <LoginButton className="nav-links-mobile" />
           </ul>
-          {button && <LoginButton className="btn--outline" />}
+          {button && <LoginButton className="btn--outline-dark" />}
         </div>
       </nav>
     </>

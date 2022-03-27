@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
-import JSONPretty from "react-json-pretty";
 import YoutubeEmbed from "../YoutubeEmbed";
+import Footer from "../Footer";
 
 function Profile() {
   const { user, isAuthenticated, getAccessTokenSilently } = useAuth0();
@@ -43,16 +43,16 @@ function Profile() {
         <img src={user.picture} alt={user.name} />
         <h2>{user.name}</h2>
         <p>{user.email}</p>
-        <JSONPretty data={user}></JSONPretty>
-        <h3>User Metadata</h3>
+
         {userMetadata ? (
           <pre>
-            {JSON.stringify(userMetadata, null, 2)}
             <YoutubeEmbed embedId={userMetadata.livestream_url} />
           </pre>
         ) : (
-          "No user metadata defined"
+          "No livestream currently"
         )}
+
+        <Footer />
       </div>
     )
   );

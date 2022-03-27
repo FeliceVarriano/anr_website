@@ -4,9 +4,10 @@ import "./App.css";
 import Home from "./components/pages/Home";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Services from "./components/pages/Services";
-import SignUp from "./components/pages/SignUp";
 import Gallery from "./components/pages/Gallery";
 import Profile from "./components/pages/Profile";
+import ContactUs from "./components/pages/ContactUs";
+import AboutUs from "./components/pages/AboutUs";
 import { useAuth0 } from "@auth0/auth0-react";
 
 function App() {
@@ -22,6 +23,8 @@ function App() {
           <Route path="/services" component={Services} />
           <Route path="/gallery" component={Gallery} />
           <Route path="/profile" component={Profile} />
+          <Route path="/contactus" component={ContactUs} />
+          <Route path="/profile" component={AboutUs} />
         </Switch>
       </Router>
     </>
