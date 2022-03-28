@@ -11,6 +11,7 @@ import {
   coreBasicPackage,
   corePremiumPackage,
   coreUltimatePackage,
+  extras,
 } from "../InfoSection/Data";
 
 export default function Services() {
@@ -23,6 +24,7 @@ export default function Services() {
         <InfoSection {...comprehensiveBasicPackage} />
         <InfoSection {...comprehensivePremiumPackage} />
         <InfoSection {...comprehensiveUltimatePackage} />
+        <InfoSection {...extras} />
         {/* <ServiceCard
           src="images/img-5.jpg"
           label="Placeholder Label"
