@@ -1,5 +1,5 @@
 .footer-container {
-  background-color: #242424;
+  background-color: var(--mainColor);
   padding: 4rem 0 2rem 0;
   display: flex;
   flex-direction: column;
@@ -20,8 +20,8 @@
 }
 
 .footer-subscription > p {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 .footer-subscription-heading {
@@ -71,17 +71,17 @@
 }
 
 .footer-link-items > h2 {
-  color: #fff;
+  color: var(--secondaryColor);
 }
 
 .footer-link-items a {
-  color: #fff;
+  color: var(--secondaryColor);
   text-decoration: none;
   margin-bottom: 0.5rem;
 }
 
 .footer-link-items a:hover {
-  color: #e9e9e9;
+  color: var(--secondaryColor);
   transition: 0.3s ease-out;
 }
 
@@ -95,7 +95,7 @@
 
 /* Social Icons */
 .social-icon-link {
-  color: #fff;
+  color: var(--secondaryColor);
   font-size: 24px;
 }
 
@@ -121,7 +121,7 @@
 }
 
 .social-logo {
-  color: #fff;
+  color: var(--secondaryColor);
   justify-self: start;
   margin-left: 20px;
   cursor: pointer;
@@ -133,7 +133,7 @@
 }
 
 .website-rights {
-  color: #fff;
+  color: var(--secondaryColor);
   margin-bottom: 16px;
 }
 

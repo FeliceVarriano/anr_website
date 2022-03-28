@@ -1,5 +1,5 @@
 .navbar {
-  background: rgb(255, 255, 255);
+  background: var(--mainColor);
   height: 80px;
   display: flex;
   justify-content: center;
@@ -50,7 +50,7 @@
 }
 
 .nav-links {
-  color: rgb(0, 0, 0);
+  color: var(--secondaryColor);
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -59,7 +59,7 @@
 }
 
 .nav-links:hover {
-  border-bottom: 4px solid rgb(0, 0, 0);
+  border-bottom: 4px solid var(--secondaryColor);
   transition: all 0.2s ease-out;
 }
 
@@ -109,7 +109,7 @@
 
   .nav-links:hover {
     background-color: rgb(0, 0, 0);
-    color: #242424;
+    color: var(--secondaryColor);
     border-radius: 0;
   }
 
@@ -151,8 +151,8 @@
   }
 
   .nav-links-mobile:hover {
-    background: rgb(255, 255, 255);
-    color: #000000;
+    background: var(--mainColor);
+    color: var(--secondaryColor);
     transition: 250ms;
   }
 }

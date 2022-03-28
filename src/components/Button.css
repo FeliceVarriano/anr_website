@@ -1,8 +1,3 @@
-:root {
-  --primary: #fff;
-  --secondary: rgb(0, 0, 0);
-}
-
 .btn {
   padding: 8px 20px;
   border-radius: 2px;
@@ -29,9 +24,9 @@
 
 .btn--outline-dark {
   background-color: transparent;
-  color: rgb(0, 0, 0);
+  color: var(--secondaryColor);
   padding: 8px 20px;
-  border: 1px solid var(--secondary);
+  border: 1px solid var(--secondaryColor);
   transition: all 0.3s ease-out;
 }
 
@@ -54,7 +49,7 @@
 
 .btn--medium:hover {
   transition: all 0.3s ease-out;
-  background: rgb(0, 0, 0);
-  color: #ffffff;
+  background: var(--secondaryColor);
+  color: var(--mainColor);
   transition: 250ms;
 }
