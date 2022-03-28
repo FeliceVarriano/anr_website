@@ -59,7 +59,6 @@ export const TextWrapper = styled.div`
 
 export const TopLine = styled.p`
   color: ${({ lightText }) => (lightText ? secondaryColor : mainColor)};
-  /* color: #01bf71; */
   font-size: 16px;
   line-height: 16px;
   font-weight: 700;
@@ -70,22 +69,65 @@ export const TopLine = styled.p`
 
 export const Heading = styled.h1`
   margin-bottom: 24px;
-  font-size: 48px;
+  font-size: 32px;
   line-height: 1.1;
   font-weight: 600;
-  color: ${({ lightText }) => (lightText ? "#f7f8fa" : "#010606")};
+  color: ${({ lightText }) =>
+    lightText ? complimentaryColor : secondaryColor};
 
   @media screen and (max-width: 480px) {
-    font-size: 32px;
+    font-size: 24px;
   }
 `;
 
 export const Subtitle = styled.p`
   max-width: 440px;
+  font-size: 18px;
+  line-height: 24px;
+  color: ${({ darkText }) => (darkText ? secondaryColor : complimentaryColor)};
+`;
+
+export const Subtitle2 = styled.p`
+  max-width: 440px;
+  font-size: 18px;
+  line-height: 24px;
+  color: ${({ darkText }) => (darkText ? secondaryColor : complimentaryColor)};
+`;
+
+export const Subtitle3 = styled.p`
+  max-width: 440px;
+  font-size: 18px;
+  line-height: 24px;
+  color: ${({ darkText }) => (darkText ? secondaryColor : complimentaryColor)};
+`;
+
+export const Subtitle4 = styled.p`
+  max-width: 440px;
+  font-size: 18px;
+  line-height: 24px;
+  color: ${({ darkText }) => (darkText ? secondaryColor : complimentaryColor)};
+`;
+
+export const Subtitle5 = styled.p`
+  max-width: 440px;
+  font-size: 18px;
+  line-height: 24px;
+  color: ${({ darkText }) => (darkText ? secondaryColor : complimentaryColor)};
+`;
+
+export const Subtitle6 = styled.p`
+  max-width: 440px;
+  font-size: 18px;
+  line-height: 24px;
+  color: ${({ darkText }) => (darkText ? secondaryColor : complimentaryColor)};
+`;
+
+export const Subtitle7 = styled.p`
+  max-width: 440px;
   margin-bottom: 35px;
   font-size: 18px;
   line-height: 24px;
-  color: ${({ darkText }) => (darkText ? "#010606" : "#fff")};
+  color: ${({ darkText }) => (darkText ? secondaryColor : complimentaryColor)};
 `;
 
 export const BtnWrap = styled.div`
