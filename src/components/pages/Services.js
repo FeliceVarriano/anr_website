@@ -1,6 +1,5 @@
 import React from "react";
 import "../../App.css";
-import ServiceCard from "../ServiceCard";
 import Footer from "../Footer";
 import styled from "styled-components";
 import InfoSection from "../InfoSection/InfoSection";
@@ -25,21 +24,6 @@ export default function Services() {
         <InfoSection {...comprehensivePremiumPackage} />
         <InfoSection {...comprehensiveUltimatePackage} />
         <InfoSection {...extras} />
-        {/* <ServiceCard
-          src="images/img-5.jpg"
-          label="Placeholder Label"
-          text="PlaceHolder Text"
-        />
-        <ServiceCard
-          src="images/img-5.jpg"
-          label="Placeholder Label"
-          text="PlaceHolder Text"
-        />
-        <ServiceCard
-          src="images/img-5.jpg"
-          label="Placeholder Label"
-          text="PlaceHolder Text"
-        /> */}
       </CardsContainer>
       <Footer />
     </Container>

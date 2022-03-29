@@ -1,6 +1,13 @@
 import React from "react";
 import "../../App.css";
+import { ContactComponent } from "../ContactComponent";
+import Footer from "../Footer";
 
 export default function ContactUs() {
-  return <h1 className="contactus">Contact Us</h1>;
+  return (
+    <>
+      <ContactComponent />
+      <Footer />
+    </>
+  );
 }
