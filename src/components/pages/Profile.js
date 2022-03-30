@@ -5,7 +5,7 @@ import Footer from "../Footer";
 import styled from "styled-components";
 
 function Profile() {
-  const { user, isAuthenticated, getAccessTokenSilently } = useAuth0();
+  const { user, getAccessTokenSilently } = useAuth0();
   const [userMetadata, setUserMetadata] = useState(null);
   console.log({ user });
 
@@ -39,24 +39,30 @@ function Profile() {
   }, [getAccessTokenSilently, user?.sub]);
 
   return (
-    <Container>
-      <img src={user.picture} alt={user.name} />
+    <>
+      {/* <img src={user.picture} alt={user.name} />
       <h2>{user.name}</h2>
-      <p>{user.email}</p>
-
-      {userMetadata ? (
-        <pre>
-          <YoutubeEmbed embedId={userMetadata.livestream_url} />
-        </pre>
-      ) : (
-        "No livestream currently"
-      )}
-
+      <p>{user.email}</p> */}
+      <LivestreamWrapper>
+        {userMetadata ? (
+          <pre>
+            <YoutubeEmbed embedId={userMetadata.livestream_url} />
+          </pre>
+        ) : (
+          "No livestream currently"
+        )}
+      </LivestreamWrapper>
       <Footer />
-    </Container>
+    </>
   );
 }
 
 export default Profile;
 
-const Container = styled.div``;
+const LivestreamWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 61em;
+  padding: 0 20px;
+`;
