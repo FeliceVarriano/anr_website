@@ -1,45 +1,40 @@
 import React from "react";
 import "./Cards.css";
 import CardItem from "./CardItem";
+import CardItemVideo from "./CardItemVideo";
 
 function Cards() {
   return (
     <div className="cards">
-      <h1>Check out these happy customers!</h1>
+      <h1>Gallery</h1>
       <div className="cards__container">
         <div className="cards__wrapper">
           <ul className="cards__items">
-            <CardItem
-              src="images/img-1.jpg"
-              text="WEDDING PLACEHOLDER TEXT HAPPY"
-              label="Traditional"
+            <CardItemVideo
+              src="/videos/ben-1.mp4"
+              text="Vicki & Ben"
+              label="Outdoor Wedding Ceremony"
               path="/services"
             />
-            <CardItem
-              src="images/img-2.jpg"
-              text="WEDDING PLACEHOLDER TEXT HAPPY"
-              label="Forever yours"
+            <CardItemVideo
+              src="/videos/carol-1.mp4"
+              text="Carol Richer"
+              label="Funeral"
               path="/services"
             />
           </ul>
           <ul className="cards__items">
-            <CardItem
-              src="images/img-3.jpg"
-              text="WEDDING PLACEHOLDER TEXT HAPPY"
-              label="Detailed"
+            <CardItemVideo
+              src="/videos/heba-1.mp4"
+              text="Heba & Daniel"
+              label="Cultural Ceremony"
               path="/services"
             />
-            <CardItem
-              src="images/img-4.jpg"
-              text="WEDDING PLACEHOLDER TEXT HAPPY"
-              label="Just you"
+            <CardItemVideo
+              src="/videos/heba-2.mp4"
+              text="Heba & Daniel"
+              label="Indoor Wedding Reception"
               path="/gallery"
-            />
-            <CardItem
-              src="images/img-5.jpg"
-              text="WEDDING PLACEHOLDER TEXT HAPPY"
-              label="Adventure"
-              path="/"
             />
           </ul>
         </div>

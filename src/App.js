@@ -8,6 +8,8 @@ import Gallery from "./components/pages/Gallery";
 import Profile from "./components/pages/Profile";
 import ContactUs from "./components/pages/ContactUs";
 import AboutUs from "./components/pages/AboutUs";
+import Services4Hour from "./components/pages/Services4Hour";
+import Services8Hour from "./components/pages/Services8Hour";
 import { useAuth0 } from "@auth0/auth0-react";
 
 function App() {
@@ -21,10 +23,12 @@ function App() {
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/services" component={Services} />
+          <Route path="/services4hour" component={Services4Hour} />
+          <Route path="/services8hour" component={Services8Hour} />
           <Route path="/gallery" component={Gallery} />
           <Route path="/profile" component={Profile} />
           <Route path="/contactus" component={ContactUs} />
-          <Route path="/profile" component={AboutUs} />
+          <Route path="/aboutus" component={AboutUs} />
         </Switch>
       </Router>
     </>

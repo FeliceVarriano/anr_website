@@ -2,29 +2,31 @@ import React from "react";
 import "../../App.css";
 import Footer from "../Footer";
 import styled from "styled-components";
-import InfoSection from "../InfoSection/InfoSection";
-import {
-  comprehensiveBasicPackage,
-  comprehensivePremiumPackage,
-  comprehensiveUltimatePackage,
-  coreBasicPackage,
-  corePremiumPackage,
-  coreUltimatePackage,
-  extras,
-} from "../InfoSection/Data";
+import CardItem from "../CardItem";
 
 export default function Services() {
   return (
     <Container>
-      <CardsContainer>
-        <InfoSection {...coreBasicPackage} />
-        <InfoSection {...corePremiumPackage} />
-        <InfoSection {...coreUltimatePackage} />
-        <InfoSection {...comprehensiveBasicPackage} />
-        <InfoSection {...comprehensivePremiumPackage} />
-        <InfoSection {...comprehensiveUltimatePackage} />
-        <InfoSection {...extras} />
-      </CardsContainer>
+      <div className="cards">
+        <div className="cards__container">
+          <div className="cards__wrapper">
+            <ul className="cards__items">
+              <CardItem
+                src="images/img-1.jpg"
+                text="View our 4 Hour Packages"
+                label="Services"
+                path="/services4hour"
+              />
+              <CardItem
+                src="images/img-2.jpg"
+                text="View our 8 Hour Packages"
+                label="Services"
+                path="/services8hour"
+              />
+            </ul>
+          </div>
+        </div>
+      </div>
       <Footer />
     </Container>
   );
@@ -33,6 +35,5 @@ export default function Services() {
 const Container = styled.div`
   justify-content: center;
   align-items: center;
+  height: 100%;
 `;
-
-const CardsContainer = styled.div``;

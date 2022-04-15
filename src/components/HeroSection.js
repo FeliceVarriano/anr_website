@@ -7,8 +7,8 @@ function HeroSection() {
   return (
     <div className="hero-container">
       <video src="/videos/video-1.mp4" autoPlay loop muted />
-      <h1>WEDDING LIVESTREAMS</h1>
-      <p>Your magical moment for all to share!</p>
+      <h1>A&R Streaming</h1>
+      <p>Quality Livestreaming Services</p>
       <div className="hero-btns">
         <Button
           className="btns"
