@@ -1,14 +1,19 @@
 {
   "name": "navbar-dropdown-v1",
+  "homepage": "http://arstreaming.ca/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@auth0/auth0-react": "^1.9.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/register": "^7.17.7",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "axios": "^0.26.1",
     "emailjs-com": "^3.2.0",
+    "express": "^4.17.3",
+    "ignore-styles": "^5.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-json-pretty": "^2.2.0",
@@ -21,7 +26,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "ssr": "node server/index.js"
   },
   "eslintConfig": {
     "extends": "react-app"
