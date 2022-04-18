@@ -10,13 +10,9 @@ import ContactUs from "./components/pages/ContactUs";
 import AboutUs from "./components/pages/AboutUs";
 import Services4Hour from "./components/pages/Services4Hour";
 import Services8Hour from "./components/pages/Services8Hour";
-import { useAuth0 } from "@auth0/auth0-react";
 import OurProcess from "./components/pages/OurProcess";
 
 function App() {
-  const { isLoading } = useAuth0();
-
-  if (isLoading) return <div>Loading...</div>;
   return (
     <>
       <Router>
