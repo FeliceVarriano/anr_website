@@ -15,6 +15,7 @@ import OurProcess from "./components/pages/OurProcess";
 function App() {
   return (
     <>
+<<<<<<< HEAD
       <Router>
         <Navbar />
         <Switch>
@@ -29,6 +30,20 @@ function App() {
           <Route path="/ourprocess" component={OurProcess} />
         </Switch>
       </Router>
+=======
+      <Navbar />
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/services" component={Services} />
+        <Route path="/services4hour" component={Services4Hour} />
+        <Route path="/services8hour" component={Services8Hour} />
+        <Route path="/gallery" component={Gallery} />
+        <Route path="/profile" component={Profile} />
+        <Route path="/contactus" component={ContactUs} />
+        <Route path="/aboutus" component={AboutUs} />
+        <Route path="/ourprocess" component={OurProcess} />
+      </Switch>
+>>>>>>> webpack
     </>
   );
 }

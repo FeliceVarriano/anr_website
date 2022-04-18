@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-import LogoutButton from "./LogoutButton";
-import LoginButton from "./LoginButton";
-import { useAuth0 } from "@auth0/auth0-react";
 
 /**
  * Navbar component:
@@ -13,7 +10,6 @@ import { useAuth0 } from "@auth0/auth0-react";
  * @returns
  */
 function Navbar() {
-  const { isAuthenticated } = useAuth0();
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
 
@@ -32,7 +28,11 @@ function Navbar() {
     showButton();
   }, []);
 
+<<<<<<< HEAD
   window.addEventListener("resize", showButton);
+=======
+  //window.addEventListener("resize", showButton);
+>>>>>>> webpack
   return (
     <>
       <nav className="navbar">
