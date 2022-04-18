@@ -11,6 +11,7 @@ import AboutUs from "./components/pages/AboutUs";
 import Services4Hour from "./components/pages/Services4Hour";
 import Services8Hour from "./components/pages/Services8Hour";
 import { useAuth0 } from "@auth0/auth0-react";
+import OurProcess from "./components/pages/OurProcess";
 
 function App() {
   const { isLoading } = useAuth0();
@@ -29,6 +30,7 @@ function App() {
           <Route path="/profile" component={Profile} />
           <Route path="/contactus" component={ContactUs} />
           <Route path="/aboutus" component={AboutUs} />
+          <Route path="/ourprocess" component={OurProcess} />
         </Switch>
       </Router>
     </>

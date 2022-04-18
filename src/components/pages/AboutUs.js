@@ -101,8 +101,8 @@ export default function AboutUs() {
             want it, in the most straightforward way possible.
           </Paragraph>
         </AuthorText>
-        <Button buttonStyle="btn--outline-dark" path="/contactus">
-          CONTACT US
+        <Button buttonStyle="btn--outline-dark" path="/ourprocess">
+          OUR PROCESS
         </Button>
       </AuthorContainerWrapper>
       <Footer />
@@ -116,6 +116,7 @@ const AuthorContainerWrapper = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+  height: 62em;
 `;
 
 const Authors = styled.div`

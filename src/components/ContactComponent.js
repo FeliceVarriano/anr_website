@@ -31,6 +31,7 @@ export const ContactComponent = () => {
       <GlobalStyle />
       <StyledFormWrapper className="container">
         <StyledForm onSubmit={sendEmail}>
+          <StyledHeader>Contact Us!</StyledHeader>
           <div className="row pt-5 mx-auto">
             <div className="col-8 form-group mx-auto">
               <StyledInput
@@ -94,6 +95,11 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
+const StyledHeader = styled.h3`
+  color: var(--secondaryColor);
+  font-weight: bold;
+`;
+
 const sharedStyles = css`
   background-color: #eee;
   height: 40px;
@@ -108,7 +114,7 @@ const StyledFormWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 61em;
+  height: 62em;
   padding: 0 20px;
 `;
 
@@ -137,7 +143,7 @@ const StyledTextArea = styled.textarea`
 `;
 const StyledButton = styled.button`
   display: block;
-  background-color: var(--mainColor);
+  background-color: var(--primary);
   color: var(--secondaryColor);
   font-size: 0.9rem;
   border: 0;

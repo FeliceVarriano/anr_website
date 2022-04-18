@@ -9,7 +9,7 @@ import {
   corePremiumPackage,
   coreUltimatePackage,
   extras,
-} from "../InfoSection/Data";
+} from "../InfoSection/Data8hr";
 import Footer from "../Footer";
 
 function Services8Hour() {
