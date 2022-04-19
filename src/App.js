@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import "./App.css";
 import Home from "./components/pages/Home";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import Services from "./components/pages/Services";
 import Gallery from "./components/pages/Gallery";
 import Profile from "./components/pages/Profile";
@@ -14,7 +14,7 @@ import OurProcess from "./components/pages/OurProcess";
 
 function App() {
   return (
-    <>
+    <Router>
       <Navbar />
       <Switch>
         <Route path="/" exact component={Home} />
@@ -22,12 +22,12 @@ function App() {
         <Route path="/services4hour" component={Services4Hour} />
         <Route path="/services8hour" component={Services8Hour} />
         <Route path="/gallery" component={Gallery} />
-        <Route path="/profile" component={Profile} />
+        <Route path="/stream" component={Profile} />
         <Route path="/contactus" component={ContactUs} />
         <Route path="/aboutus" component={AboutUs} />
         <Route path="/ourprocess" component={OurProcess} />
       </Switch>
-    </>
+    </Router>
   );
 }
 
