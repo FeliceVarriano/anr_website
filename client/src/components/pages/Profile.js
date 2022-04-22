@@ -3,23 +3,15 @@ import YoutubeEmbed from "../YoutubeEmbed";
 import styled from "styled-components";
 
 function Profile() {
-  // const mysql = require("mysql");
-  // const db = mysql.createPool({
-  //   host: process.env.DB_HOST,
-  //   user: process.env.DB_USER,
-  //   password: process.env.DB_USER_PASSWORD,
-  //   database: process.env.DB_DATABASE,
-  // });
-
-  // const sqlQuery = "SELECT * FROM `livestreams` WHERE `livestreamId` = 1";
-  // let url = db.query(sqlQuery, (err, result) => {
-  //   console.log(result);
-  // });
-
+  const [, updateState] = React.useState();
+  const forceUpdate = React.useCallback(() => updateState({}), []);
   return (
     <>
+      <button onClick={forceUpdate}>Force re-render</button>
       <LivestreamWrapper>
-        <pre>{/* <YoutubeEmbed embedId={url} /> */}</pre>
+        <pre>
+          <YoutubeEmbed embedId={process.env.REACT_APP_LIVESTREAM_URL} />
+        </pre>
       </LivestreamWrapper>
     </>
   );
