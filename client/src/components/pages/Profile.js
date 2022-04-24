@@ -1,16 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import YoutubeEmbed from "../YoutubeEmbed";
 import styled from "styled-components";
+import Axios from "axios";
 
 function Profile() {
-  const [, updateState] = React.useState();
-  const forceUpdate = React.useCallback(() => updateState({}), []);
+  const [url, setUrl] = useState("");
+  useEffect(() => {
+    Axios.get("http://localhost:3001/api/get").then((response) => {
+      console.log(response.data[0].livestreamUrl);
+      setUrl(response.data[0].livestreamUrl);
+    });
+  }, []);
+
   return (
     <>
-      <button onClick={forceUpdate}>Force re-render</button>
       <LivestreamWrapper>
         <pre>
-          <YoutubeEmbed embedId={process.env.REACT_APP_LIVESTREAM_URL} />
+          <YoutubeEmbed embedId={url} />
         </pre>
       </LivestreamWrapper>
     </>
