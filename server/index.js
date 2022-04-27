@@ -3,26 +3,28 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const mysql = require("mysql2");
-const { restart } = require("nodemon");
+const port = process.env.PORT || 3001;
+const hostname = "127.0.0.1";
 
 app.use(cors());
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// const db = mysql.createPool({
-//   host: process.env.DB_HOST,
-//   user: process.env.DB_USER,
-//   password: process.env.DB_USER_PASSWORD,
-//   database: process.env.DB_DATABASE,
-// });
-
 const db = mysql.createPool({
-  host: "localhost",
+  host: "68.178.222.76",
   port: "3306",
-  user: "root",
-  password: "password",
-  database: "livestreams",
+  user: "mike_db",
+  password: "vHatGmC46Bce",
+  database: "anrstreamingdb",
 });
+
+// const db = mysql.createPool({
+//   host: "localhost",
+//   port: "3306",
+//   user: "root",
+//   password: "password",
+//   database: "livestreams",
+// });
 
 app.get("/api/get", (req, res) => {
   const sqlSelect =
@@ -40,6 +42,6 @@ app.get("/api/get", (req, res) => {
   //res.send("Hola");
 });
 
-app.listen(3001, () => {
-  console.log("server is running on port 3001");
+app.listen(port, hostname, () => {
+  console.log(`server is running on port ${port} ${hostname}`);
 });
