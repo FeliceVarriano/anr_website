@@ -3,16 +3,26 @@ import YoutubeEmbed from "../YoutubeEmbed";
 import styled from "styled-components";
 import Axios from "axios";
 import { Button } from "../Button";
+import { db } from "../../firebase-config";
+import { collection, doc, getDocs } from "firebase/firestore";
 
 function Profile() {
-  const [url, setUrl] = useState(loadUrl());
+  const [url, setUrl] = useState("");
+  const livestreamCollectionRef = collection(db, "livestreams");
 
-  function loadUrl() {
-    Axios.get("http://localhost:3001/api/get").then((response) => {
-      console.log(response.data[0].livestreamUrl);
-      setUrl(response.data[0].livestreamUrl);
-    });
-  }
+  useEffect(() => {
+    const loadUrl = async () => {
+      // Axios.get("http://localhost:3001/api/get").then((response) => {
+      //   console.log(response.data[0].livestreamUrl);
+      //   setUrl(response.data[0].livestreamUrl);
+      // });
+      const data = await getDocs(livestreamCollectionRef);
+      console.log("data");
+      const livestreams = data.docs.map((ls) => ({ ...ls.data() }));
+      setUrl(livestreams[0]["livestreamUrl"]);
+    };
+    loadUrl();
+  }, []);
 
   return url ? (
     <>
@@ -20,7 +30,7 @@ function Profile() {
         class="btn--outline-dark"
         href="https://stmaryscathedral.ca/mass-on-livestream/"
       >
-        St. Mary's
+        St. Mary's Mass Livestream
       </a>
       <LivestreamWrapper>
         <pre>
@@ -30,13 +40,7 @@ function Profile() {
     </>
   ) : (
     <>
-      <span>No Livestream Currently, check back later...</span>
-      <a
-        class="btn--outline-dark"
-        href="https://stmaryscathedral.ca/mass-on-livestream/"
-      >
-        St. Mary's
-      </a>
+      <span>Loading...</span>
     </>
   );
 }
