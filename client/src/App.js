@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "./components/Navbar";
-import "./App.css";
+import "./Css/App.css";
 import Home from "./components/pages/Home";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import Services from "./components/pages/Services";

@@ -1,18 +1,22 @@
 export const questions = [
   {
     questionText: "How long is your event?",
-    answerOptions: ["4 hours", "8 hours"],
+    answerOptions: [{ answerText: "4 hours" }, { answerText: "8 hours" }],
   },
   {
     questionText: "Do you require an audio system?",
-    answerOptions: ["Yes", "No"],
+    answerOptions: [{ answerText: "Yes" }, { answerText: "No" }],
   },
   {
     questionText: "Do you want a more basic or comprehensive package?",
-    answerOptions: ["Core", "Comprehensive"],
+    answerOptions: [{ answerText: "Core" }, { answerText: "Comprehensive" }],
   },
   {
     questionText: "How many cameras/focal points do you want?",
-    answerOptions: ["1 (Basic)", "2 (Premium)", "3+ (Ultimate)"],
+    answerOptions: [
+      { answerText: "1 (Basic)" },
+      { answerText: "2 (Premium)" },
+      { answerText: "3+ (Ultimate)" },
+    ],
   },
 ];

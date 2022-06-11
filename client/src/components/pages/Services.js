@@ -1,70 +1,70 @@
-import React, { useState, button } from "react";
-import "../../App.css";
+import React, { useState } from "react";
 import Footer from "../Footer";
 import styled from "styled-components";
-import CardItem from "../CardItem";
-import ModalFooter from "react-bootstrap/ModalFooter";
-import ModalBody from "react-bootstrap/ModalBody";
-import ModalTitle from "react-bootstrap/ModalTitle";
-import ModalHeader from "react-bootstrap/ModalHeader";
-import ModalDialog from "react-bootstrap/ModalDialog";
-import Modal from "react-bootstrap/Modal";
-import Button from "react-bootstrap/Button";
-import "bootstrap/dist/css/bootstrap.min.css";
+import "../../Css/HelpMeDecide.css";
+import { questions } from "../Static/HelpMeDecide";
+import { Button } from "../Button";
 
 export default function Services() {
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleOpen = () => setShow(true);
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [showScore, setShowScore] = useState(false);
+  const [answers, setAnswer] = useState([]);
+
+  const handleAnswerOptionClick = (answer) => {
+    setAnswer([...answers, answer]);
+
+    const nextQuestion = currentQuestion + 1;
+    if (nextQuestion < questions.length) {
+      setCurrentQuestion(nextQuestion);
+    } else {
+      setShowScore(true);
+    }
+  };
 
   return (
     <>
       <Container>
-        {/* <div className="cards">
-          <div className="cards__container">
-            <div className="cards__wrapper">
-              <ul className="cards__items">
-                <CardItem
-                  src="images/svg-image-3.svg"
-                  text="View our 4 Hour Packages"
-                  label="Services"
-                  path="/services4hour"
-                />
-                <CardItem
-                  src="images/svg-image-2.svg"
-                  text="View our 8 Hour Packages"
-                  label="Services"
-                  path="/services8hour"
-                />
-              </ul>
+        <div className="popup">
+          {showScore ? (
+            <div className="score-section">
+              {answers.map((txt) => (
+                <p>{txt}</p>
+              ))}
+              <Button
+                className="btns"
+                buttonStyle="btn--primary"
+                buttonSize="btn--medium"
+                path="/services4hour"
+              >
+                View Package!
+              </Button>
             </div>
-          </div>
-        </div> */}
-
-        <Button variant="primary" onClick={handleOpen}>
-          Help Me Decide!
-        </Button>
-
-        <Modal
-          size="lg"
-          aria-labelledby="contained-modal-title-vcenter"
-          centered
-          show={show}
-          onHide={handleClose}
-        >
-          <ModalHeader closeButton>
-            <ModalTitle>Modal heading</ModalTitle>
-          </ModalHeader>
-          <ModalBody>Woohoo, you're reading this text in a modal!</ModalBody>
-          <ModalFooter>
-            <Button variant="secondary" onClick={handleClose}>
-              Close
-            </Button>
-            <Button variant="primary" onClick={handleClose}>
-              Save Changes
-            </Button>
-          </ModalFooter>
-        </Modal>
+          ) : (
+            <>
+              <div className="question-section">
+                <div className="question-count">
+                  <span>Question {currentQuestion + 1}</span>/{questions.length}
+                </div>
+                <div className="question-text">
+                  {questions[currentQuestion].questionText}
+                </div>
+              </div>
+              <div className="answer-section">
+                {questions[currentQuestion].answerOptions.map(
+                  (answerOption) => (
+                    <button
+                      onClick={() =>
+                        handleAnswerOptionClick(answerOption.answerText)
+                      }
+                    >
+                      {answerOption.answerText}
+                    </button>
+                  )
+                )}
+              </div>
+            </>
+          )}
+        </div>
       </Container>
       <Footer />
     </>
@@ -72,7 +72,5 @@ export default function Services() {
 }
 
 const Container = styled.div`
-  justify-content: center;
-  align-items: center;
   height: 61em;
 `;

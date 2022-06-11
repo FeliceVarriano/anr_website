@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import YoutubeEmbed from "../YoutubeEmbed";
 import styled from "styled-components";
-import Axios from "axios";
-import { Button } from "../Button";
 import { db } from "../../firebase-config";
 import { collection, doc, getDocs } from "firebase/firestore";
 
@@ -29,6 +27,7 @@ function Profile() {
       <a
         class="btn--outline-dark"
         href="https://stmaryscathedral.ca/mass-on-livestream/"
+        style=""
       >
         St. Mary's Mass Livestream
       </a>
