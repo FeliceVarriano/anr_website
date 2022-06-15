@@ -1,8 +1,8 @@
 import React from "react";
 import Navbar from "./components/Navbar";
-import "./Css/App.css";
-import Home from "./components/pages/Home";
 import { HashRouter as Router, Switch, Route } from "react-router-dom";
+import Home from "./components/pages/Home";
+import "./Css/App.css";
 import Services from "./components/pages/Services";
 import Gallery from "./components/pages/Gallery";
 import Profile from "./components/pages/Profile";
@@ -11,6 +11,7 @@ import AboutUs from "./components/pages/AboutUs";
 import Services4Hour from "./components/pages/Services4Hour";
 import Services8Hour from "./components/pages/Services8Hour";
 import OurProcess from "./components/pages/OurProcess";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/aboutus" component={AboutUs} />
         <Route path="/ourprocess" component={OurProcess} />
       </Switch>
+      <Footer />
     </Router>
   );
 }

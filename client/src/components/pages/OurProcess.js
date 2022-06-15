@@ -67,7 +67,6 @@ function OurProcess() {
           ContactUs
         </Button>
       </ProcessesContainer>
-      <Footer />
     </>
   );
 }

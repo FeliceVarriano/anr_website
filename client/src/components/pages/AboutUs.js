@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import "../../Css/App.css";
-import Footer from "../Footer";
 import { Button } from "../Button";
 
 export default function AboutUs() {
@@ -105,7 +104,6 @@ export default function AboutUs() {
           OUR PROCESS
         </Button>
       </AuthorContainerWrapper>
-      <Footer />
     </>
   );
 }

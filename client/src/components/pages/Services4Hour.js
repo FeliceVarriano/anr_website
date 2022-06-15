@@ -24,7 +24,6 @@ function Services4Hour() {
         <InfoSection {...comprehensiveUltimatePackage} />
         <InfoSection {...extras} />
       </CardsContainer>
-      <Footer />
     </div>
   );
 }

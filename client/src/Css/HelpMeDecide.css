@@ -91,3 +91,8 @@ button:focus {
 button svg {
   margin-right: 5px;
 }
+
+.help-me-decide {
+  width: 200px;
+  justify-content: center;
+}

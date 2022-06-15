@@ -24,7 +24,6 @@ function Services8Hour() {
         <InfoSection {...comprehensiveUltimatePackage} />
         <InfoSection {...extras} />
       </CardsContainer>
-      <Footer />
     </div>
   );
 }
