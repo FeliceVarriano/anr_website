@@ -1,5 +1,4 @@
 import React from "react";
-import "../Css/App.css";
 import { Button } from "./Button";
 import "../Css/HeroSection.css";
 
