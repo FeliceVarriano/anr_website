@@ -1,6 +1,25 @@
 .cards {
   padding: 4rem;
   background: #fff;
+  margin-top: 330px;
+}
+
+@media screen and (max-width: 960px) {
+  .cards {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cards {
+    margin-top: 70px;
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .cards {
+    margin-top: 30px;
+  }
 }
 
 h1 {

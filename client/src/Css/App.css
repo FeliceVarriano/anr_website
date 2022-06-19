@@ -8,11 +8,6 @@
   --complimentaryColor: #f9f9f9;
 }
 
-#root {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
 
 * {
   box-sizing: border-box;
@@ -21,9 +16,7 @@
   font-family: "PT Sans", sans-serif;
 }
 
-html {
-  height: 100%;
-}
+
 
 .home,
 .services,
@@ -67,9 +60,7 @@ html {
   font-size: 100px;
 }
 
-body {
-  height: 100%;
-}
+
 
 .website-embedded {
   size: 100%;
