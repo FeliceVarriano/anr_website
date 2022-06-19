@@ -4,9 +4,23 @@
   margin-top: 330px;
 }
 
+.services__cards {
+  padding: 4rem;
+  background: #fff;
+}
+
 @media screen and (max-width: 960px) {
   .cards {
     margin-top: 30px;
+  }
+
+  .cards__container {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    max-width: 660px;
+    width: 90%;
+    margin: 0 auto;
   }
 }
 
@@ -14,11 +28,14 @@
   .cards {
     margin-top: 70px;
   }
-}
 
-@media screen and (max-width: 468px) {
-  .cards {
-    margin-top: 30px;
+  .cards__container {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    max-width: 330px;
+    width: 90%;
+    margin: 0 auto;
   }
 }
 

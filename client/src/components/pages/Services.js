@@ -29,7 +29,7 @@ export default function Services() {
 
   return (
     <Container>
-      <div className="cards">
+      <div className="services__cards">
         <div className="cards__container">
           <div className="cards__wrapper">
             <ul className="cards__items">
