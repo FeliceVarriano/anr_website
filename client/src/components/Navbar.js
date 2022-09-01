@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import "../Css/Navbar.css";
+import { Link } from "next/link";
 
 /**
  * Navbar component:

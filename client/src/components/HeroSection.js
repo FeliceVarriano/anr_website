@@ -1,6 +1,5 @@
 import React from "react";
 import { Button } from "./Button";
-import "../Css/HeroSection.css";
 
 function HeroSection() {
   return (

@@ -1,7 +1,5 @@
 import React from "react";
-import "../Css/Footer.css";
-import { Button } from "./Button";
-import { Link } from "react-router-dom";
+import { Link } from "next/link";
 
 function Footer() {
   return (

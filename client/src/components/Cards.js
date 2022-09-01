@@ -1,5 +1,4 @@
 import React from "react";
-import "../Css/Cards.css";
 import CardItem from "./CardItem";
 import CardItemVideo from "./CardItemVideo";
 

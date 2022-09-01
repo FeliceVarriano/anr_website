@@ -1,0 +1,15 @@
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/ContactUs": "pages/ContactUs.js",
+  "/Gallery": "pages/Gallery.js",
+  "/Home": "pages/Home.js",
+  "/OurProcess": "pages/OurProcess.js",
+  "/Profile": "pages/Profile.js",
+  "/Services": "pages/Services.js",
+  "/Services4Hour": "pages/Services4Hour.js",
+  "/Services8Hour": "pages/Services8Hour.js",
+  "/": "pages/index.js",
+  "/AboutUs": "pages/AboutUs.js",
+  "/_document": "pages/_document.js"
+}
